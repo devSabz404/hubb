@@ -5,9 +5,9 @@ import ProductSection from '../components/productSection';
 export default function Index() {
   return (
     <Page>
-      {process.env.NODE_ENV === 'production' && (
-        <Warning message="This is not a real e-commerce, it is just a code exercise." />
-      )}
+      {/* {process.env.NODE_ENV === 'production' && (
+        <Warning message="Not yet live." />
+      )} */}
       <ProductSection />
     </Page>
   );

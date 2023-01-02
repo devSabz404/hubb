@@ -32,7 +32,7 @@ export default function Fotter() {
           </Link>
         </div>
 
-        <div className="social-links">
+        {/* <div className="social-links">
           <Link href="/">
             <a>
               <FaFacebookF color="#d8d8d8" size="18px" />
@@ -53,11 +53,11 @@ export default function Fotter() {
               <FaYoutube color="#d8d8d8" size="18px" />
             </a>
           </Link>
-        </div>
+        </div> */}
       </div>
       <div className="footer footer-bottom">
         <div className="texts">
-          <p>© 2016. habaah UI kit</p>
+          <p>© 2023. habaah </p>
           <p>Privacy Policy</p>
           <p>Terms of Use</p>
         </div>
@@ -67,15 +67,15 @@ export default function Fotter() {
             <div>
               <FaCcVisa color="#424242" size="32px" />
             </div>
-            <div>
+            {/* <div>
               <FaCcMastercard color="#424242" size="32px" />
-            </div>
+            </div> */}
             <div>
               <FaCcPaypal color="#424242" size="32px" />
             </div>
-            <div>
+            {/* <div>
               <FaCcAmazonPay color="#424242" size="32px" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
