@@ -21,5 +21,13 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     quotes: ['error', 'single'],
+    'react/no-unknown-property': [
+      2,
+      {
+        'ignore': [
+          'jsx'
+        ]
+      }
+    ]
   },
 };
