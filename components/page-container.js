@@ -4,13 +4,13 @@ export default function PageContainer({ title, description, children }) {
   return (
     <div className="container">
       <Head>
-        <title>{title || 'habaah  E-commerce - Next Project'}</title>
+        <title>{title || 'habaah'}</title>
         {description !== false && (
           <meta
             name="description"
             content={
               description ||
-              'habaah E-commerce made with Next.js open-source project.'
+              'habaah b2b platform.'
             }
           />
         )}
