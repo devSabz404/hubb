@@ -1,9 +1,9 @@
+require('dotenv').config();
+
 module.exports = {
   development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './db/db.sqlite',
-    },
+    client: 'pg',
+    connection:process.env.NEXT_PUBLIC_DB_URL,
     migrations: {
       directory: './db/migrations',
     },
@@ -13,22 +13,20 @@ module.exports = {
     useNullAsDefault: true,
   },
   test: {
-    client: 'sqlite3',
-    connection: {
-      filename: './db/test.sqlite',
-    },
+    client: 'pg',
+    connection:process.env.NEXT_PUBLIC_DB_URL,
     migrations: {
       directory: './db/migrations',
     },
     useNullAsDefault: true,
   },
   production: {
-    client: 'mysql',
-    connection: {
-      host: '127.0.0.1',
-      user: 'your_database_user',
-      password: 'your_database_password',
-      database: 'myapp_test',
-    },
+    client: 'pg',
+    connection:process.env.NEXT_PUBLIC_DB_URL
+  },
+  migrations: {
+    directory: './db/migrations',
   },
 };
+
+//console.log('Hello',process.env.NEXT_PUBLIC_DB_URL)

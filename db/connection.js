@@ -1,10 +1,12 @@
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config()
+
 const knex = require('knex');
-const configuration = require('../knexfile');
 
-let config;
+const knexfile = require('../knexfile');
 
-if (process.env.NODE_ENV === 'test') config = configuration.test;
-if (process.env.NODE_ENV === 'development') config = configuration.development;
-if (process.env.NODE_ENV === 'production') config = configuration.production;
 
-export const connection = knex(config);
+const env = process.env.NODE_ENV || 'development';
+const configOptions = knexfile[env];
+
+export const connection = knex(configOptions);
